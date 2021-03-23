@@ -1,0 +1,9 @@
+{
+    "private": true,
+    "scripts": {
+        "client":"cd client && npm run start",
+        "server": "cd server && php artisan serve",
+        "application": "npm run client && npm run server"
+
+    }
+}
