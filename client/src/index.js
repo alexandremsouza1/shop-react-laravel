@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
 import './index.css';
+import Theme from './config.js'
+import Routes from './routes'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+//Redux
+import { store } from './store/store'
+import { Provider }from 'react-redux'
 
+import reportWebVitals from './reportWebVitals';
+const theme = new Theme(createMuiTheme);
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+    <ThemeProvider theme={theme.getTema()}>
+      <Routes />
+      <App />
+    </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
