@@ -2,11 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MdPayment } from 'react-icons/md'
 import { Button,TextField } from '@material-ui/core';
-import { Loading,Notify } from './view/components'
+import { Loading,Notify,Alert } from './view/components'
 const App = () => {
   return (
      <>
-     <Notify />
+     <Alert />
      <h4 className="text-danger">Aplicação React</h4>
      <MdPayment />
      <TextField />
