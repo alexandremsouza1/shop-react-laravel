@@ -12,14 +12,12 @@ import { Provider }from 'react-redux'
 import reportWebVitals from './reportWebVitals';
 const theme = new Theme(createMuiTheme);
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
     <ThemeProvider theme={theme.getTema()}>
       <Routes />
       <App />
     </ThemeProvider>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 
