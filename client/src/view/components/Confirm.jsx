@@ -4,9 +4,9 @@ import {Button,Dialog,DialogActions,DialogTitle} from '@material-ui/core'
 export default function Confirm(props) {
   const [open, setOpen] = React.useState(props.open);
   const {title, onConfirm } = props;
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
 
   const handleClose = () => {
     setOpen(false);

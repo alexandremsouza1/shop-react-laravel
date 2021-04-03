@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 import { change,login } from '../../store/actions/auth.action'
 import { Typography,TextField,Button } from '@material-ui/core'
 import { useSelector,useDispatch} from 'react-redux'
@@ -41,6 +42,9 @@ export default function Auth() {
               onClick={()=> dispatch(login(credentials))}
               >Entrar
             </Button>
+            {(success) && 
+              <Redirect to="/login" />
+            }
           </div>
         </div>
       </div>
