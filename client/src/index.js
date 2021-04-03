@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import Theme from './config.js'
 import Routes from './routes'
-import App from './App';
+import { Loading,Notify,Alert,Confirm } from './view/components'
 //Redux
 import { store } from './store/store'
 import { Provider }from 'react-redux'
@@ -14,8 +15,11 @@ const theme = new Theme(createMuiTheme);
 ReactDOM.render(
     <Provider store={store}>
     <ThemeProvider theme={theme.getTema()}>
+      <Loading />
+      <Notify />
+      <Alert />
+      <Confirm />
       <Routes />
-      <App />
     </ThemeProvider>
     </Provider>,
   document.getElementById('root')

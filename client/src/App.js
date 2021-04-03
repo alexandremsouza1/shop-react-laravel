@@ -2,11 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MdPayment } from 'react-icons/md'
 import { Button,TextField } from '@material-ui/core';
-import { Loading,Notify,Alert,Confirm } from './view/components'
+
 const App = () => {
   return (
      <>
-     <Confirm open={true} onConfirm={()=>alert('confirm')}/>
      <h4 className="text-danger">Aplicação React</h4>
      <MdPayment />
      <TextField />

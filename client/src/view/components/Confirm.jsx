@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button,Dialog,DialogActions,DialogContent,DialogContentText,DialogTitle} from '@material-ui/core'
+import {Button,Dialog,DialogActions,DialogTitle} from '@material-ui/core'
 
 export default function Confirm(props) {
   const [open, setOpen] = React.useState(props.open);
@@ -14,9 +14,6 @@ export default function Confirm(props) {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open alert dialog
-      </Button>
       <Dialog
         open={open}
         onClose={handleClose}

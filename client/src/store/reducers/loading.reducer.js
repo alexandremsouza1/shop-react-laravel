@@ -1,7 +1,7 @@
 import { actiontypes } from '../actions/loading.action' 
 
 const initialState = {
-  open:true,
+  open:false,
   msg: 'Carregando...'
 }
 
