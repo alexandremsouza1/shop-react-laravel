@@ -16,7 +16,9 @@ export default function Auth() {
               <img src="/logo.png" alt="CAR CRM" height="48" />
               <Typography className="mt-3" variant="h6" component="h1">Plataform de revenda de veiculos </Typography>
             </div>
-            <TextField 
+            <TextField
+              fullWidth
+              variant="outlined"
               label="Email"
               type="email"
               margin="normal"
@@ -25,7 +27,9 @@ export default function Auth() {
               onChange={text => dispatch(change({email:text.target.value}))}
             />
 
-            <TextField 
+            <TextField
+              fullWidth
+              variant="outlined"
               label="Senha"
               type="password"
               margin="normal"

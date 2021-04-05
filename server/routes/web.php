@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* Primeira opção
+Route::post('/register', 'App\Http\Controllers\Auth\AuthController@store');
+*/
+
+
+/* Segunda opção */
+Route::post('/register', [AuthController::class,'store']);
