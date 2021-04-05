@@ -32,8 +32,8 @@ export const login = credential => dispatch => {
   dispatch(changeLoading(({open:true,msg:'Autenticando o usuario'})))
   return Http.post('oauth/token',{
     grant_type:'password',
-    client_id:2,
-    client_secret:'DT7eHwxr7Yir11iuajkzL9W4DQszDxY2CabxK8qX',
+    client_id:process.env.REACT_APP_CLIENT_ID,
+    client_secret:process.env.REACT_APP_CLIENT_SECRET,
     username:credential.email,
     password:credential.password,
     scope: ''
