@@ -1,12 +1,12 @@
 import React, {Suspense,lazy} from 'react'
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import { CircularProgress } from '@material-ui/core'
-import Auth from './view/auth'
 
 
 
+const Auth = lazy(()=> import('./view/auth'));
 const Register = lazy(()=> import('./view/register'));
-const vehicles = lazy(()=> import('./vehicles'));
+const vehicles = lazy(()=> import('./view/vehicles'));
 
 const Routes = () => (
   <Router>
