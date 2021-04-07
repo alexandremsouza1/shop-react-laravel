@@ -1,8 +1,9 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect,Link } from 'react-router-dom'
 import { change,login } from '../../store/actions/auth.action'
 import { Typography,TextField,Button } from '@material-ui/core'
 import { useSelector,useDispatch} from 'react-redux'
+import { RegisterButton } from '../../view/components'
 
 export default function Auth() {
   const dispatch = useDispatch();
@@ -46,6 +47,18 @@ export default function Auth() {
               onClick={()=> dispatch(login(credentials))}
               >Entrar
             </Button>
+
+            <RegisterButton
+              component={Link}
+              to="/register"
+              variant="contained"
+              fullWidth
+              size="large"
+            >
+              Cadastrar
+            </RegisterButton>
+
+
             {(success) && 
               <Redirect to="/login" />
             }

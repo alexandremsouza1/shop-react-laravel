@@ -15,3 +15,7 @@ code {
 .outline-none {
   outline: none !important
 }
+
+a, a:hover {
+  text-decoration: none !important;
+}
