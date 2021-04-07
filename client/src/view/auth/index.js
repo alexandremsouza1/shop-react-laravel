@@ -3,7 +3,7 @@ import { Redirect,Link } from 'react-router-dom'
 import { change,login } from '../../store/actions/auth.action'
 import { Typography,TextField,Button } from '@material-ui/core'
 import { useSelector,useDispatch} from 'react-redux'
-import { RegisterButton } from '../../view/components'
+import  RegisterButton  from '../register/RegisterButton'
 
 export default function Auth() {
   const dispatch = useDispatch();
