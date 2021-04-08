@@ -7,7 +7,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Rules\isValidPassword;
+use App\Rules\IsValidPassword;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -43,7 +43,7 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(),[
             'name'=>'required|string|max:255',
             'email'=> 'required|string|email|max:255|unique:users',
-            'password'=>['required','string',new isValidPassword()]
+            'password'=>['required','string',new IsValidPassword()]
         ]);
         if($validator->fails()){
             return response()->json(['errors'=>$validator->errors()],400);
