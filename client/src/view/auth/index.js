@@ -60,7 +60,7 @@ export default function Auth() {
 
 
             {(success) && 
-              <Redirect to="/login" />
+              <Redirect to="/vehicles" />
             }
           </div>
         </div>
